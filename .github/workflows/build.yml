@@ -42,6 +42,33 @@ jobs:
           make clean || true
           make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
 
+      - name: Verify package contents
+        shell: bash
+        run: |
+          set -e
+          rm -rf verify && mkdir -p verify
+          for deb in packages/*.deb; do
+            echo "== $deb"
+            rm -rf verify/x verify/ctl && mkdir verify/x verify/ctl
+            dpkg-deb -x "$deb" verify/x
+            dpkg-deb -e "$deb" verify/ctl
+            app=$(find verify/x -name DoubleClickLock.app -type d | head -1)
+            dylib=$(find verify/x -name DoubleClick.dylib | head -1)
+            filter=$(find verify/x -name DoubleClick.plist -path "*DynamicLibraries*" | head -1)
+            prefs=$(find verify/x -name DoubleClickPrefs.bundle -type d | head -1)
+            test -n "$app" || { echo "Lock Screen app missing"; exit 1; }
+            test -n "$dylib" || { echo "tweak dylib missing"; exit 1; }
+            test -n "$filter" || { echo "tweak filter plist missing"; exit 1; }
+            test -n "$prefs" || { echo "settings bundle missing"; exit 1; }
+            test -f "$app/Info.plist" || { echo "app Info.plist missing"; exit 1; }
+            test -x "$app/DoubleClickLock" || { echo "app executable missing"; exit 1; }
+            ls "$app" | grep -q "AppIcon60x60@3x.png" || { echo "app icon missing"; exit 1; }
+            plutil -lint "$app/Info.plist"
+            test -f "$prefs/Root.plist" || { echo "settings Root.plist missing"; exit 1; }
+            test -f "$prefs/DoubleClickPrefs" || { echo "settings binary missing"; exit 1; }
+            ls -R "$app" | head -30
+          done
+
       - name: Collect DEB files
         shell: bash
         run: |

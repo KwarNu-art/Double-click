@@ -8,7 +8,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>A cute helper for your power button. Two gestures: double tap to unlock, double tap to sleep.</string>
+			<string>A cute helper for your power button: double tap to unlock, double tap to sleep, and a Lock Screen app icon on your Home Screen that turns the screen off.</string>
 			<key>label</key>
 			<string>Double-Click</string>
 		</dict>
@@ -102,7 +102,15 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>Tap Speed is the longest gap allowed between the two taps.</string>
+			<string>Double-Click adds a Lock Screen app to your Home Screen. Tap its icon and the screen turns off. It works even when the gestures above are switched off. If the icon is missing, respring.</string>
+			<key>label</key>
+			<string>Lock Screen App</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Tap Speed is the longest gap allowed between the two taps. Show Messages displays a short note at the top of the screen after every double tap, saying what Double-Click did or why it ignored the tap. Turn it off once everything works.</string>
 			<key>label</key>
 			<string>Options</string>
 		</dict>
@@ -147,6 +155,20 @@
 			<string>haptic</string>
 			<key>label</key>
 			<string>Haptic Feedback</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.kwarnu.doubleclick/prefschanged</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.kwarnu.doubleclick</string>
+			<key>key</key>
+			<string>debug</string>
+			<key>label</key>
+			<string>Show Messages</string>
 		</dict>
 		<dict>
 			<key>cell</key>

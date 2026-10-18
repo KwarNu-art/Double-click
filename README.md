@@ -5,11 +5,11 @@
 <h1 align="center">Double-Click</h1>
 
 <p align="center"><b>A cute helper for your power button.</b><br>
-Double tap to unlock. Double tap to sleep.</p>
+Double tap to unlock. Double tap to sleep. One tap on the Lock icon to turn the screen off.</p>
 
 <p align="center"><img src="assets/banner.png" alt="Double-Click banner"></p>
 
-## Two features, nothing else
+## Features
 
 **1. Double tap to unlock**
 - Double tap empty space on the **Lock Screen** and the unlock screen opens, exactly like pressing the Home button.
@@ -20,7 +20,11 @@ Double tap to unlock. Double tap to sleep.</p>
 - Double tap the **status bar** (top of the screen) to turn the screen off, like pressing the power button. It works on the Lock Screen, the Home Screen and inside apps while the status bar is visible.
 - Double tap **empty space on the Home Screen** to turn the screen off. It never reacts to icons, folders, widgets or buttons, so normal taps are not hijacked.
 
-**Settings > Double-Click** controls everything: a master switch, each gesture on its own, tap speed (Fast, Normal, Relaxed), haptic feedback, a Test Sleep button, Reset to Defaults and Respring.
+**3. Lock icon on your Home Screen**
+- A cute **Lock** app icon is installed. Tap it and the screen turns off right away, without opening anything.
+- If the icon does not show after install, respring or run uicache (Sileo and Zebra do it for you).
+
+**Settings > Double-Click** controls everything: a master switch, each gesture on its own, tap speed (Fast, Normal, Relaxed), haptic feedback, a Show Messages switch (small on-screen notes that tell you what Double-Click saw, useful if a tap does nothing), a Test Sleep button, Reset to Defaults and Respring.
 
 ## Where each gesture works
 
@@ -29,6 +33,7 @@ Double tap to unlock. Double tap to sleep.</p>
 | Empty space on the Lock Screen | Unlock screen opens |
 | Status bar (Lock Screen, Home Screen, apps) | Screen turns off |
 | Empty space on the Home Screen | Screen turns off |
+| Tap the Lock icon | Screen turns off |
 
 ## Waking the phone
 

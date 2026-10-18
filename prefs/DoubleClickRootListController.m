@@ -56,7 +56,7 @@
 
 - (void)resetDefaults {
     NSArray *keys = @[@"enabled", @"unlock", @"sleep", @"sleepStatusBar", @"sleepEmpty",
-                      @"haptic", @"speedMs"];
+                      @"haptic", @"debug", @"speedMs"];
     for (NSString *key in keys) {
         CFPreferencesSetAppValue((__bridge CFStringRef)key, NULL, DC_DOMAIN);
     }

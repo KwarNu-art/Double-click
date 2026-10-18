@@ -11,7 +11,7 @@ DoubleClick_FILES = Tweak.x
 DoubleClick_CFLAGS = -fobjc-arc -Wno-deprecated-declarations -Wno-unused-function
 DoubleClick_FRAMEWORKS = UIKit AudioToolbox
 
-SUBPROJECTS += prefs
+SUBPROJECTS += prefs lockapp
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 include $(THEOS_MAKE_PATH)/aggregate.mk

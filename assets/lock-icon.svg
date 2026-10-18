@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <clipPath id="clip"><rect width="1024" height="1024" rx="232"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b9a6ff"/>
+      <stop offset="0.55" stop-color="#8f9bff"/>
+      <stop offset="1" stop-color="#6fc3ff"/>
+    </linearGradient>
+    <radialGradient id="btn" cx="0.38" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.7" stop-color="#f4f0ff"/>
+      <stop offset="1" stop-color="#e2d9ff"/>
+    </radialGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff9ccb"/>
+      <stop offset="1" stop-color="#ff6fae"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="26" stdDeviation="26" flood-color="#3b2f9a" flood-opacity="0.38"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#8a1f5a" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+    <circle cx="512" cy="560" r="470" fill="url(#halo)"/>
+
+    <!-- the sleepy button -->
+    <circle cx="512" cy="570" r="262" fill="url(#btn)" filter="url(#shadow)"/>
+    <circle cx="512" cy="570" r="262" fill="none" stroke="#ffffff" stroke-width="10" stroke-opacity="0.9"/>
+
+    <!-- closed, sleepy eyes -->
+    <path d="M388 566 Q430 604 472 566" fill="none" stroke="#3a2a5e" stroke-width="18" stroke-linecap="round"/>
+    <path d="M552 566 Q594 604 636 566" fill="none" stroke="#3a2a5e" stroke-width="18" stroke-linecap="round"/>
+    <ellipse cx="372" cy="630" rx="42" ry="24" fill="#ff8fb8" fill-opacity="0.75"/>
+    <ellipse cx="652" cy="630" rx="42" ry="24" fill="#ff8fb8" fill-opacity="0.75"/>
+    <ellipse cx="512" cy="636" rx="20" ry="26" fill="#3a2a5e"/>
+    <ellipse cx="512" cy="646" rx="11" ry="12" fill="#ff8fb8"/>
+
+    <!-- Zz -->
+    <g fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M690 250 H770 L690 350 H776"/>
+      <path d="M810 150 H860 L810 212 H864" stroke-width="16"/>
+    </g>
+
+    <!-- padlock badge -->
+    <g filter="url(#soft)">
+      <circle cx="268" cy="298" r="104" fill="url(#badge)"/>
+      <circle cx="268" cy="298" r="104" fill="none" stroke="#fff" stroke-width="10"/>
+    </g>
+    <path d="M232 292 V268 A36 36 0 0 1 304 268 V292" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
+    <rect x="216" y="290" width="104" height="82" rx="20" fill="#fff"/>
+    <circle cx="268" cy="326" r="11" fill="#ff6fae"/>
+    <rect x="263" y="328" width="10" height="24" rx="5" fill="#ff6fae"/>
+
+    <!-- sparkles and a little heart -->
+    <g fill="#fff">
+      <path d="M850 640 l9 25 25 9 -25 9 -9 25 -9 -25 -25 -9 25 -9z" opacity="0.95"/>
+      <path d="M170 760 l7 19 19 7 -19 7 -7 19 -7 -19 -19 -7 19 -7z" opacity="0.85"/>
+      <circle cx="560" cy="150" r="7" opacity="0.8"/>
+      <circle cx="900" cy="470" r="6" opacity="0.8"/>
+      <circle cx="880" cy="880" r="7" opacity="0.7"/>
+      <circle cx="260" cy="910" r="6" opacity="0.7"/>
+    </g>
+    <path d="M0 -14 c-26 -36 -78 -6 -44 30 l44 42 44 -42 c34 -36 -18 -66 -44 -30z" fill="#ff7fb0" opacity="0.92" transform="translate(790 850) scale(0.62)"/>
+  </g>
+</svg>
