@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>A cute helper for your power button. Two gestures: double tap to unlock, double tap to sleep.</string>
+			<key>label</key>
+			<string>Double-Click</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.kwarnu.doubleclick/prefschanged</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.kwarnu.doubleclick</string>
+			<key>key</key>
+			<string>enabled</string>
+			<key>label</key>
+			<string>Enable Double-Click</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Double tap empty space on the Lock Screen. It opens the unlock screen, exactly like pressing the Home button: with a passcode or Touch ID you still confirm it yourself, nothing is skipped. It never reacts to notifications, buttons or the passcode pad.</string>
+			<key>label</key>
+			<string>Double Tap to Unlock</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.kwarnu.doubleclick/prefschanged</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.kwarnu.doubleclick</string>
+			<key>key</key>
+			<string>unlock</string>
+			<key>label</key>
+			<string>Double Tap Lock Screen to Unlock</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Double tap to turn the screen off, like pressing the power button. Status Bar works at the top of the Lock Screen, the Home Screen and inside apps (when the status bar is visible). Empty Space works on the Home Screen and never reacts to icons, folders, widgets or buttons.</string>
+			<key>label</key>
+			<string>Double Tap to Sleep</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.kwarnu.doubleclick/prefschanged</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.kwarnu.doubleclick</string>
+			<key>key</key>
+			<string>sleep</string>
+			<key>label</key>
+			<string>Double Tap to Sleep</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.kwarnu.doubleclick/prefschanged</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.kwarnu.doubleclick</string>
+			<key>key</key>
+			<string>sleepStatusBar</string>
+			<key>label</key>
+			<string>Double Tap the Status Bar</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.kwarnu.doubleclick/prefschanged</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.kwarnu.doubleclick</string>
+			<key>key</key>
+			<string>sleepEmpty</string>
+			<key>label</key>
+			<string>Double Tap Empty Space (Home Screen)</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Tap Speed is the longest gap allowed between the two taps.</string>
+			<key>label</key>
+			<string>Options</string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.kwarnu.doubleclick/prefschanged</string>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<integer>350</integer>
+			<key>defaults</key>
+			<string>com.kwarnu.doubleclick</string>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>key</key>
+			<string>speedMs</string>
+			<key>label</key>
+			<string>Tap Speed</string>
+			<key>validTitles</key>
+			<array>
+				<string>Fast</string>
+				<string>Normal</string>
+				<string>Relaxed</string>
+			</array>
+			<key>validValues</key>
+			<array>
+				<integer>250</integer>
+				<integer>350</integer>
+				<integer>500</integer>
+			</array>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>com.kwarnu.doubleclick/prefschanged</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.kwarnu.doubleclick</string>
+			<key>key</key>
+			<string>haptic</string>
+			<key>label</key>
+			<string>Haptic Feedback</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Turns the screen off in 3 seconds so you can see it work. Wake the phone with the Home button.</string>
+			<key>label</key>
+			<string>Test</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>testSleep</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Test Sleep</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Other</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>resetDefaults</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Reset to Defaults</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>respring</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Respring</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Double-Click</string>
+</dict>
+</plist>

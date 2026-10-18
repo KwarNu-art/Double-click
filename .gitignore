@@ -1,0 +1,5 @@
+.theos/
+packages/
+obj/
+output_deb/
+.DS_Store

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>entry</key>
+	<dict>
+		<key>bundle</key>
+		<string>DoubleClickPrefs</string>
+		<key>cell</key>
+		<string>PSLinkCell</string>
+		<key>detail</key>
+		<string>DoubleClickRootListController</string>
+		<key>icon</key>
+		<string>DoubleClick.png</string>
+		<key>isController</key>
+		<true/>
+		<key>label</key>
+		<string>Double-Click</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,10 @@
+Package: com.kwarnu.doubleclick
+Name: Double-Click
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Double tap to unlock the Lock Screen and double tap to put the screen to sleep. A cute helper for your power button.
+Maintainer: KwarNu
+Author: KwarNu
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader
+Icon: https://raw.githubusercontent.com/KwarNu-art/Double-Click/main/assets/icon.png

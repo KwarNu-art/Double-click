@@ -1,0 +1,57 @@
+name: Build Double-Click
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Build Dependencies
+        shell: bash
+        run: |
+          brew install ldid dpkg
+          echo "$(brew --prefix)/bin" >> "$GITHUB_PATH"
+
+      - name: Install Theos
+        shell: bash
+        run: |
+          THEOS_DIR="${RUNNER_TEMP}/theos"
+          rm -rf "$THEOS_DIR"
+          git clone --recursive --depth=1 https://github.com/theos/theos.git "$THEOS_DIR"
+          rm -rf "$THEOS_DIR/sdks"
+          git clone --depth=1 https://github.com/theos/sdks.git "$THEOS_DIR/sdks"
+          echo "THEOS=$THEOS_DIR" >> "$GITHUB_ENV"
+
+      - name: Build Rootful Package (checkra1n / unc0ver / Odyssey)
+        shell: bash
+        run: |
+          make clean || true
+          make package FINALPACKAGE=1
+
+      - name: Build Rootless Package (palera1n / Dopamine)
+        shell: bash
+        run: |
+          make clean || true
+          make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+
+      - name: Collect DEB files
+        shell: bash
+        run: |
+          mkdir -p output_deb
+          find packages -name "*.deb" -exec cp {} output_deb/ \;
+          ls -la output_deb/
+
+      - name: Upload DEB Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Double-Click-deb
+          path: output_deb/*.deb
+          if-no-files-found: error

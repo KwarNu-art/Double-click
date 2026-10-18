@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <clipPath id="clip"><rect width="1024" height="1024" rx="232"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffbfdc"/>
+      <stop offset="0.5" stop-color="#cbb8ff"/>
+      <stop offset="1" stop-color="#8fd6ff"/>
+    </linearGradient>
+    <radialGradient id="btn" cx="0.38" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.7" stop-color="#fff1f7"/>
+      <stop offset="1" stop-color="#ffd9ea"/>
+    </radialGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9a7bff"/>
+      <stop offset="1" stop-color="#6d4fe0"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.65"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="26" stdDeviation="26" flood-color="#6a4bb8" flood-opacity="0.35"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#4b2f9a" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+    <circle cx="512" cy="540" r="470" fill="url(#halo)"/>
+
+    <!-- two tap ripples: "double click" -->
+    <circle cx="512" cy="540" r="372" fill="none" stroke="#fff" stroke-width="16" stroke-opacity="0.38"/>
+    <circle cx="512" cy="540" r="312" fill="none" stroke="#fff" stroke-width="20" stroke-opacity="0.6"/>
+
+    <!-- the cute button -->
+    <circle cx="512" cy="540" r="250" fill="url(#btn)" filter="url(#shadow)"/>
+    <circle cx="512" cy="540" r="250" fill="none" stroke="#ffffff" stroke-width="10" stroke-opacity="0.9"/>
+
+    <!-- face -->
+    <ellipse cx="438" cy="530" rx="28" ry="38" fill="#3a2a5e"/>
+    <ellipse cx="586" cy="530" rx="28" ry="38" fill="#3a2a5e"/>
+    <circle cx="448" cy="514" r="10" fill="#fff"/>
+    <circle cx="596" cy="514" r="10" fill="#fff"/>
+    <ellipse cx="378" cy="602" rx="42" ry="24" fill="#ff8fb8" fill-opacity="0.75"/>
+    <ellipse cx="646" cy="602" rx="42" ry="24" fill="#ff8fb8" fill-opacity="0.75"/>
+    <path d="M468 592 Q512 646 556 592" fill="none" stroke="#3a2a5e" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- power badge -->
+    <g filter="url(#soft)">
+      <circle cx="708" cy="352" r="96" fill="url(#badge)"/>
+      <circle cx="708" cy="352" r="96" fill="none" stroke="#fff" stroke-width="10"/>
+    </g>
+    <path d="M674 322 A52 52 0 1 0 742 322" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round"/>
+    <path d="M708 300 L708 350" fill="none" stroke="#fff" stroke-width="20" stroke-linecap="round"/>
+
+    <!-- sparkles and a little heart -->
+    <g fill="#fff">
+      <path d="M200 250 l10 28 28 10 -28 10 -10 28 -10 -28 -28 -10 28 -10z" opacity="0.95"/>
+      <path d="M860 640 l8 22 22 8 -22 8 -8 22 -8 -22 -22 -8 22 -8z" opacity="0.9"/>
+      <path d="M170 760 l7 19 19 7 -19 7 -7 19 -7 -19 -19 -7 19 -7z" opacity="0.85"/>
+      <circle cx="300" cy="150" r="7" opacity="0.8"/>
+      <circle cx="840" cy="190" r="6" opacity="0.8"/>
+      <circle cx="880" cy="860" r="7" opacity="0.7"/>
+      <circle cx="260" cy="900" r="6" opacity="0.7"/>
+    </g>
+    <path d="M0 -14 c-26 -36 -78 -6 -44 30 l44 42 44 -42 c34 -36 -18 -66 -44 -30z" fill="#ff7fb0" opacity="0.92" transform="translate(236 830) scale(0.62)"/>
+  </g>
+</svg>
